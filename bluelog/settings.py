@@ -46,6 +46,7 @@ class BaseConfig(object):
 
     BLUELOG_UPLOAD_PATH = os.path.join(basedir, 'uploads')
     BLUELOG_ALLOWED_IMAGE_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif']
+    backoffice_login = False
 
 
 class DevelopmentConfig(BaseConfig):
