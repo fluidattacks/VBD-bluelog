@@ -10,6 +10,7 @@ watchdog = "==0.10.2"
 faker = "==4.0.2"
 
 [packages]
+flask-admin = "==1.6.1"
 alembic = "==1.4.2"
 click = "==7.1.1"
 itsdangerous = "==1.1.0"

@@ -40,6 +40,15 @@ def create_app(config_name=None):
     register_shell_context(app)
     register_template_context(app)
     register_request_handlers(app)
+
+    from flask_admin import Admin as AdminSite
+    from .platform_views import MemberView
+    from .models import Admin
+    from .extensions import db
+
+    admin = AdminSite(app, url='/office', endpoint='backoffice')
+    admin.add_view(MemberView(Admin, db.session, endpoint='members'))
+
     return app
 
 
